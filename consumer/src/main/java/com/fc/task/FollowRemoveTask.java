@@ -1,7 +1,7 @@
 package com.fc.task;
 
-import com.fc.NotificationGetService;
-import com.fc.NotificationRemoveService;
+import com.fc.service.NotificationGetService;
+import com.fc.service.NotificationRemoveService;
 import com.fc.domain.NotificationType;
 import com.fc.event.FollowEvent;
 import lombok.extern.slf4j.Slf4j;

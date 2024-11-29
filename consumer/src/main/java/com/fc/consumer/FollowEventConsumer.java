@@ -1,5 +1,7 @@
-package com.fc.event;
+package com.fc.consumer;
 
+import com.fc.domain.FollowEventType;
+import com.fc.event.FollowEvent;
 import com.fc.task.FollowAddTask;
 import com.fc.task.FollowRemoveTask;
 import lombok.extern.slf4j.Slf4j;

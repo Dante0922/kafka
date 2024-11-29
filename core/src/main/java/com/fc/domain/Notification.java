@@ -1,4 +1,4 @@
-package com.fc;
+package com.fc.domain;
 
 import com.fc.domain.NotificationType;
 import lombok.AllArgsConstructor;

@@ -1,5 +1,6 @@
 package com.fc.event;
 
+import com.fc.domain.LikeEventType;
 import lombok.Data;
 
 import java.time.Instant;

@@ -1,5 +1,7 @@
-package com.fc;
+package com.fc.service;
 
+import com.fc.domain.Notification;
+import com.fc.repository.NotificationRepository;
 import com.fc.domain.NotificationType;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,18 +25,6 @@ public class NotificationGetService {
     }
 
     public Optional<Notification> getNotificationByTypeAndUserIdAndFollowerId(NotificationType type, Long targetId, Long followerId) {
-
-        log.info("LGW 뭐지? type :{}", type);
-        log.info("LGW 뭐지? targetId :{}", targetId);
-        log.info("LGW 뭐지? followerId :{}", followerId);
-
-        Optional<Notification> byTypeAndUserIdAndFollowerId = repository.findByTypeAndUserIdAndFollowerId(type, targetId, followerId);
-
-        if (byTypeAndUserIdAndFollowerId.isPresent()) {
-            Notification notification = byTypeAndUserIdAndFollowerId.get();
-            log.info("hello" + notification.toString());
-        }
-
-        return byTypeAndUserIdAndFollowerId;
+        return repository.findByTypeAndUserIdAndFollowerId(type, targetId, followerId);
     }
 }

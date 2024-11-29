@@ -1,5 +1,6 @@
 package com.fc.event;
 
+import com.fc.domain.CommentEventType;
 import lombok.Data;
 
 @Data

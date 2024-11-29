@@ -1,6 +1,5 @@
-package com.fc.api;
+package com.fc.contorller.test;
 
-import com.fc.Comment;
 import com.fc.event.CommentEvent;
 import com.fc.event.FollowEvent;
 import com.fc.event.LikeEvent;
@@ -10,9 +9,6 @@ import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.MediaType;
-
-
-import java.awt.*;
 
 @Tag(name = "Event Consumer 호출 테스트 API")
 public interface EventConsumerTestControllerSpec {

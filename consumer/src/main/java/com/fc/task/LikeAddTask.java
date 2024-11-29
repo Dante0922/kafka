@@ -1,9 +1,12 @@
 package com.fc.task;
 
 
-import com.fc.*;
-import com.fc.domain.NotificationType;
+import com.fc.client.PostClient;
+import com.fc.domain.*;
 import com.fc.event.LikeEvent;
+import com.fc.service.NotificationGetService;
+import com.fc.service.NotificationSaveService;
+import com.fc.utils.NotificationIdGenerator;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

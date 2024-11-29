@@ -1,11 +1,10 @@
-package com.fc.api;
+package com.fc.contorller.test;
 
 import com.fc.event.CommentEvent;
 import com.fc.event.FollowEvent;
 import com.fc.event.LikeEvent;
 import com.fc.task.CommentRemoveTask;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

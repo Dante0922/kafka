@@ -1,5 +1,6 @@
-package com.fc.event;
+package com.fc.consumer;
 
+import com.fc.event.LikeEvent;
 import com.fc.task.LikeAddTask;
 import com.fc.task.LikeRemoveTask;
 import lombok.extern.slf4j.Slf4j;
@@ -9,8 +10,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.function.Consumer;
 
-import static com.fc.event.LikeEventType.ADD;
-import static com.fc.event.LikeEventType.REMOVE;
+import static com.fc.domain.LikeEventType.ADD;
+import static com.fc.domain.LikeEventType.REMOVE;
 
 @Component
 @Slf4j

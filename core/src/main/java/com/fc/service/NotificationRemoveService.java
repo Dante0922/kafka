@@ -1,11 +1,9 @@
-package com.fc;
+package com.fc.service;
 
-import com.fc.domain.NotificationType;
+import com.fc.repository.NotificationRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import java.util.Optional;
 
 @Component
 @Slf4j
