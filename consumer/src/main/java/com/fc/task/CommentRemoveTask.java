@@ -25,7 +25,7 @@ public class CommentRemoveTask {
             return;
         }
 
-        getService.getNotification(NotificationType.COMMENT, event.getCommentId())
+        getService.getNotificationByTypeAndCommentId(NotificationType.COMMENT, event.getCommentId())
             .ifPresentOrElse(
                 notification -> removeService.deleteById(notification.getId()),
                     () -> log.error("notification not found")

@@ -8,7 +8,7 @@ import java.time.Instant;
 public class LikeEvent {
     private LikeEventType type;
     private Long postId;
-    private Long userId;
+    private Long userId;    // 좋아요한 유저
     private Instant createdAt;
 
 }
