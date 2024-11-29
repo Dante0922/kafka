@@ -1,6 +1,7 @@
 package com.fc.api;
 
 import com.fc.event.CommentEvent;
+import com.fc.event.FollowEvent;
 import com.fc.event.LikeEvent;
 import com.fc.task.CommentRemoveTask;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +17,10 @@ public class EventConsumerTestController implements EventConsumerTestControllerS
 
     @Autowired
     private Consumer<CommentEvent> comment;
-
     @Autowired
     private Consumer<LikeEvent> like;
+    @Autowired
+    private Consumer<FollowEvent> follow;
 
 
     @Autowired
@@ -32,5 +34,11 @@ public class EventConsumerTestController implements EventConsumerTestControllerS
     @PostMapping("/test/like")
     public void like(@RequestBody LikeEvent event) {
         like.accept(event);
+    }
+
+
+    @PostMapping("/test/follow")
+    public void follow(@RequestBody FollowEvent event) {
+        follow.accept(event);
     }
 }
