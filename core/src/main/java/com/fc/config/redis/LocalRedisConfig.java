@@ -12,9 +12,9 @@ import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactor
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.utility.DockerImageName;
 
+@Profile("test")
 @Slf4j
 @Configuration
-@Profile("redis")
 public class LocalRedisConfig {
 
     private static final String IMAGE = "redis:7.4.0";
@@ -40,7 +40,7 @@ public class LocalRedisConfig {
         }
     }
 
-    @Bean
+    @Bean(name = "redisConnectionFactory")
     public RedisConnectionFactory redisConnectionFactory() {
         RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration(redis.getHost(), redis.getMappedPort(PORT));
 

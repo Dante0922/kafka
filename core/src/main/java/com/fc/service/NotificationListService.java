@@ -14,7 +14,7 @@ public class NotificationListService {
 
     private final NotificationRepository repository;
 
-    private static final int PAGE_SIZE = 20;
+    private static final int PAGE_SIZE = 3;
 
     public NotificationListService(NotificationRepository repository) {
         this.repository = repository;

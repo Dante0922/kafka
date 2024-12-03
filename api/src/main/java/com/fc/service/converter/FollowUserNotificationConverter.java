@@ -8,9 +8,11 @@ import com.fc.domain.Post;
 import com.fc.domain.User;
 import com.fc.service.dto.ConvertedCommentNotification;
 import com.fc.service.dto.ConvertedFollowNotification;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 @Component
+@Slf4j
 public class FollowUserNotificationConverter {
 
     private final UserClient userClient;
@@ -23,7 +25,14 @@ public class FollowUserNotificationConverter {
 
     public ConvertedFollowNotification convert(FollowNotification notification) {
 
+
+
+        log.info("lgw followerId : " + notification.getFollowerId());
+
         User user = userClient.getUser(notification.getFollowerId());
+
+        log.info("lgw username : ", user.getName());
+        log.info("lgw userId : ", user.getId());
         boolean isFollowing = userClient.getIsFollowing(notification.getUserId(), notification.getFollowerId());
 
         return new ConvertedFollowNotification(
