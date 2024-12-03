@@ -11,6 +11,6 @@ import java.time.Instant;
 public interface UserNotificationListControllerSpec {
 
     @Operation(summary = "사용자 알림 목록 조회")
-    UserNotificationListResponse getNotifications(@Parameter(example = "1L") Long userId,
+    UserNotificationListResponse getNotifications(@Parameter(example = "1") Long userId,
                                                   @Parameter(example = "2024-01-01T00:11:22.382") Instant pivot);
 }

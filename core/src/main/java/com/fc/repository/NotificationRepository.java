@@ -32,4 +32,6 @@ public interface NotificationRepository extends MongoRepository<Notification, St
 
     Slice<Notification> findAllByUserIdAndOccurredAtLessThanOrderByOccurredAtDesc(Long userId, Instant occurredAt, Pageable pageable);
 
+    Optional<Notification> findFirstByUserIdOrderByLastUpdatedAtDesc(Long userId);
+
 }
